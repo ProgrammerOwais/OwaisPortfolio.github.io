@@ -1,0 +1,1048 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+
+::after,::before,*,html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root {
+    --body-bg:hsl(0, 0%, 100%);
+    --header-bg-color:hsl(0, 0%, 100%);
+    --header-links:hsl(240, 80%, 43%);
+    --heading-color:hsl(21, 7%, 40%);
+    --sec1-hiHeading:hsl(21, 7%, 30%);
+    --para-color:hsl(0, 0%, 0%);
+    --card-btn:0.8rem;
+    --card-bg-color:hsl(0, 0%, 100%);
+    --card-bg:hsl(193, 98%, 50%);
+    --yellow-color:hsl(52, 98%, 50%);
+    --card-color1:hsl(25, 100%, 60%);
+    --card-color3:hsl(25, 100%, 50%);
+    --card-text:hsl(347, 7%, 30%);
+    --bottom-headings:hsl(110, 91%, 42%);
+    --shadow-color:hsla(0, 0%, 0%, 0.5);
+
+}
+body {
+    position: relative;
+    background-color: var(--body-bg);
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    min-width: 100px;
+}
+.h1 {
+    font-size: 1.8rem;
+    font-family: 'Cookie';
+
+}
+.h2 {
+    font-size: 1.6rem;
+
+    
+    
+}
+.h3 {
+    font-size: 1.4rem;
+}
+.h4 {
+    font-size: 1.2rem;
+    
+}
+/**************************************************** HEADER SECTION *********************************/
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    box-shadow: 0 1px 5px var(--shadow-color);
+    transition: all .5s ease;
+}
+
+#site-header.hide {
+	top: -70px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.header-sec {
+    background-color: var(--header-bg-color);
+    color: var(--para-color);
+    display: flex;
+    justify-content: space-around;
+}
+.header-col-1 {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header-col-1 .head-heading {
+    align-self: center;
+    padding-bottom: 0.8rem;
+    font-family: 'Dancing Script', cursive;
+    color: var(--heading-color);
+    
+}
+
+.header-col-2 {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/**************************************************** hamburger *******************************************************/
+
+.hamburger{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger-menu{
+    align-self: center;
+    width: 30px;
+    height: 1.6px;
+    border-radius: 25px;
+    background-color: var(--heading-color);
+    transition: .3s all;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1.6px;
+    border-radius: 25px;
+    background-color: var(--heading-color);
+    transition: all 0.3s ease-out
+}
+
+.hamburger-menu::before{
+    transform: translateY(-9px);
+}
+
+.hamburger-menu::after{
+    transform: translateY(9px);
+}
+
+.header-col-2.active .hamburger-menu::before{
+    transform: translateY(0) rotate(45deg);
+}
+
+.header-col-2.active .hamburger-menu::after{
+    transform: translateY(0) rotate(-45deg);
+}
+
+.header-col-2.active .hamburger-menu{
+    transform: rotate(360deg);
+    background-color: transparent;
+}
+
+/******************************************************* End hamburger *************************************************/
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 98%;
+    left: 1%;    
+    top: 4.5rem;
+    background-color: var(--bottom-headings);
+    padding: 3rem 0;
+    border-radius: 1rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 400ms;
+    
+}
+
+.header-col-2.active .nav-list {
+    transform: translateX(0%);
+    opacity: 1;
+}
+.nav-item {
+    position: relative;
+    padding: 1rem 0;
+    
+
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--para-color);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+.nav-links:hover , .nav-links:focus {
+    border-bottom: 2px solid var(--para-color);
+}
+
+ .themes:hover , .themes:focus , 
+ .works:hover , .works:focus {
+     border-bottom: 0px;
+ }
+
+ .link-arrow {
+     color: var(--para-color);
+     font-weight: bolder;
+     font-size: 1rem;
+     margin-top: 0.5rem;
+     margin-left: 0.2rem;
+ }
+
+ 
+ .link-arrow-toggle {
+
+    writing-mode: vertical-lr;
+     
+ }
+
+
+
+.sub-list {
+    list-style: none;
+    position: relative;
+    top: 0.2rem;
+    background-color: transparent;
+    width: 100%;
+    display: none;
+    border-radius: 5px;
+}
+.toggle-sub-list {
+    display: block;
+   }
+   
+.sub-items{
+    text-align: center;
+    padding: 0.2rem;
+    margin: 0.1rem auto;
+    width: 100%;
+}
+.sub-items:last-of-type {
+    margin-bottom: 0;
+}
+
+.sub-items:hover {
+    background-color: var(--yellow-color);
+}
+
+.sub-nav-links{
+    text-decoration: none;
+    color: var(--para-color);
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    
+}
+
+
+main{
+    position: relative;
+    top: 70px;
+}
+
+/************************************************ scrolling effect styling ***********************/
+[data-scroll] {
+    opacity: 0;
+    transition: all 1.5s;
+
+}
+
+/************** By default right scrolled element ***********/
+
+.scroll-effect-1 {
+    transform: translateX(100%);
+}
+
+/************** By default left scrolled element ***********/
+
+.scroll-effect-2 {
+    transform: translateX(-100%);
+}
+
+
+/************** By default bottom scrolled element ***********/
+
+.scroll-effect-3{
+    transform: translateY(10%);
+
+ }
+
+
+/******************* animation effect through scrolling using classes from javascript *******/
+.right {
+    opacity: 1;
+    transform: translateX(0%);
+
+}
+
+.left {
+    opacity: 1;
+    transform: translateX(0%);
+
+}
+
+.bottom {
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+
+
+/****************************************************  SECTION 1 *********************************/
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section1part1 {
+    height: 90vh;
+}
+
+
+.section1-heading {
+    animation:hi 0.5s linear 1s forwards;
+    position: relative;
+    top: 4rem;
+    margin-left: 1rem;
+    transform: rotate(-3deg);
+    color:var(--sec1-hiHeading);
+    display: inline-block;
+    font-size: 1.4rem;
+    opacity: 0;
+
+}
+@keyframes hi {
+    from {
+        left: -20%;
+        
+    }
+    to {
+        left: 0%;
+        opacity: 1;
+    }
+    
+}
+.para1 {
+    position: relative;
+    top: 3rem;
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px;
+    animation: hi 300ms linear 1.5s forwards;;
+    color:var(--heading-color);
+    margin-top: 1.1rem;
+    letter-spacing: 1.1px;
+    line-height: 1.7;
+    background-color: transparent;  
+    text-align: center;
+        opacity: 0;
+       
+}
+
+.sec1-foot-icons {
+    top: 2.2rem;
+    text-align: center;
+    animation:hi 300ms linear 1.5s forwards;
+    opacity: 0;
+}
+.section1part1 .btn-group {
+    position: relative;
+    top: 1.3rem;
+}
+
+.para1 > a > .sec1-btn {
+    letter-spacing: 1px;
+    background-color: var(--bottom-headings);
+    color: var(--body-bg);
+}
+
+.para1 > a > .sec1-btn:hover , .para1 > a > .sec1-btn:focus {
+    background-color: var(--card-color1);
+}
+
+.para2 {
+    color:var(--heading-color);
+    color: var(--para-color);
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 0.3rem;
+}
+
+
+
+/********************************************************  SECTION 2 ******************************************************/
+.section2 {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.div-img {
+    margin: 1rem;
+    order: 1;
+}
+.section2-heading1,.section2-heading2 {
+    margin-top: 2rem;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color:var(--heading-color);
+}
+.section2 > .card2 {
+    order: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/********************************************************  SECTION 3 ******************************************************/
+
+.card {
+    position: relative;
+    background-color: var(--card-bg-color);
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--shadow-color),
+                -1px -1px 5px var(--shadow-color);
+}
+.card-heading {
+    clip-path: polygon(0 0 , 100% 0 , 100% 85% , 0 100% );
+    background-color:var(--card-bg);
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: var(--card-color1);
+    font-size: 1.7rem;
+}
+.card-icons {
+    min-width: auto;
+    width: 20px;
+    margin-bottom: -1rem;
+    margin-bottom: 0;
+}
+.css-icon {
+    border-radius: 3px;
+}
+.js-icon {
+    margin-bottom: -0.2rem;
+}
+.psd {
+    width: 100%;
+    max-width: 200px;
+}
+.psd2 {
+    width: 100%;
+    max-width: 60px;
+
+}
+
+.card-body {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    letter-spacing: 0.8px;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--para-color);
+    display: flex;
+    flex-direction:column;
+}
+
+.card-list {
+    margin-top: 0.5rem;
+}
+
+
+.card-list-items {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+.list-emojie {
+    width: 5%;
+    padding: 1px;
+    padding-right: 0;
+    color: var(--bottom-headings);
+    font-size: var(--card-btn);
+    
+}
+.card-list-text {
+    width: 94%;
+    text-align: left;
+    margin-left: 0.5rem;
+    padding: 1px;
+    padding-left: 0;
+    color:var(--heading-color);
+    font-size: var(--card-btn);
+}
+
+.btn-group {
+    margin: 1rem;
+    margin-bottom: 0rem;
+}
+
+.card-btn {
+    background-color: var(--card-bg);
+    color:var(--card-color1);
+    font-size:var(--card-btn);
+    font-weight: 550;
+    margin-right: 0.2rem;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 1rem;
+    transition: all 300ms;
+}
+.card-btn:hover,.card-btn:focus {
+    cursor: pointer;
+    background-color: var(--card-bg);
+    color: var(--body-bg);
+    box-shadow: 1px 3px 5px var(--shadow-color);
+}
+
+/********************************************************  SECTION 4 ******************************************************/
+
+.section4 {
+    margin: 1rem;
+}
+.section4-img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section4-img {
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+/********************************************************  SECTION 5 ******************************************************/
+.section5-img {
+    border-radius: 20px;
+}
+.section5-heading {
+    color:var(--heading-color);
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+.section5-heading2 {
+    color:var(--card-bg);
+    font-weight: 550;
+    
+}
+.section5-card-heading {
+    clip-path: polygon(0 0 , 100% 50%, 0% 100%);
+    background-color: var(--card-color3);
+    color: var(--body-bg);
+    font-weight: normal;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+.section5-card {
+    margin: 1rem;
+    margin-top: 1.6rem;
+}
+.section5-card:first-of-type {
+    margin-top: 0.3rem;
+}
+
+.project-cards {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--shadow-color);
+    box-shadow: none;
+    transition: all 300ms;
+}
+.section5-cards-part1 .card  .card-body  .project-cards {
+    max-width: 300px;
+
+}
+.project-cards:hover,.project-cards:focus {
+    transform: scale(1.05);
+}
+.card-body > .card-text {
+    margin-bottom: 0.3rem;
+    color: var(--card-text);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.project-card-body > .card-text {
+    margin-top: 0.1rem;
+    padding: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.sec5-card-btn {
+    background-color:var(--card-color3) ;
+    color: var(--body-bg);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+
+}
+
+.sec5-card-btn:hover,.sec5-card-btn:focus {
+    background-color:var(--card-color1) ;
+    color: var(--heading-color);
+    box-shadow: 1px 3px 5px var(--shadow-color);
+}
+.sec5-card-heading2 {
+    clip-path: polygon(0 0 , 100% 50%, 0% 100%);
+    background-color:var(--yellow-color) ;
+    color: black;
+    
+}
+.sec5-card-btn2 {
+    
+    background-color: var(--yellow-color);
+    color: black;
+    letter-spacing: 1px;
+    
+
+}
+
+.sec5-card-btn2:hover, .sec5-card-btn2:focus {
+    background-color: var(--yellow-color);
+    color: var(--body-bg);
+    box-shadow: 1px 3px 5px var(--shadow-color);
+}
+
+/********************************************************  SECTION 6 *********************************************/
+
+.section6-heading {
+    color:var(--bottom-headings);
+    padding: 1rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+}
+
+.section6-img {
+    padding: 1rem;
+}
+
+
+/********************************************************  SECTION 7 Footer *************************************/
+
+footer {
+    position: relative;
+    top: 70px;
+    width: 70%;
+    margin: 0 auto;
+}
+ 
+.footer-heading {
+    color:var(--bottom-headings);
+    margin: 1.5rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+.foot-para {
+    color: var(--sec1-hiHeading);
+    margin: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+
+.foot-icons {
+    min-width: auto;
+    width: 44px;
+    padding: 5px;
+    margin: 0;
+    transition: all 300ms;
+}
+
+.foot-icons:hover , .foot-icons:focus {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+/******************************************************** media screen from width 768px to 901px ***********************************/
+
+@media (min-width:768px) {
+    
+
+
+    /************************************************************** Header section *********************************************/
+    .header-col-1 {
+        padding: 0;
+        width: 25%;
+    }
+    .header-col-2 {
+        display: block;
+        width: 72%;
+    }
+    .hamburger {
+        display: none;
+    }
+    
+    .header-col-1 .head-heading {
+        align-self: center;
+        padding-bottom: 0.8rem;
+        font-family: 'Dancing Script', cursive;
+        color: var(--heading-color);
+        
+    }
+    .nav-list {
+        flex-direction: row;
+        padding: 0.5rem;
+        width: auto;
+        position: relative;
+        left: 0;
+        top: -0.3rem;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .nav-item {
+        padding-bottom: .5rem;
+    
+    }
+    
+    .nav-links {
+        color: var(--header-links);
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+    .nav-links:hover , .nav-links:focus {
+        border-bottom: 2px solid var(--card-color3);
+    }
+    
+    
+     .link-arrow {
+         color: var(--card-color3);
+         font-weight: bolder;
+         padding: 0rem 0.3rem;
+     }
+    
+     .nav-item:hover .link-arrow {
+        writing-mode: vertical-lr;
+        padding: 0rem 0rem;
+     }
+    
+    
+    
+    
+    .sub-list {
+        position: absolute;
+        top: 2.7rem;
+        background-color: var(--bottom-headings);
+    }
+    .sub-items{
+        padding: 5px;
+    }
+    .sub-nav-links{
+        font-size: 1rem;
+        
+    }
+    
+    .nav-item:hover .sub-list , .nav-item:focus .sub-list{
+        display: block;
+    }
+    
+     /**************************************************************** SECTION 1 ******************************************/
+
+    .section1 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section1part1 {
+        height: auto;
+        position: relative;
+        width: 55%;
+    }
+    .section1part2 {
+        margin-top: 1rem;
+        width: 45%;
+        
+    }
+    .section1part1 .btn-group {
+        position: relative;
+       
+    }
+
+    .para1 > a > .sec1-btn {
+        font-size: 1.2rem;
+
+    }
+
+    .section1-heading {
+        top: 2rem;
+    }
+    .para1 {
+        top: 1rem;
+    }
+    
+    .sec1-foot-icons {
+        top: 0.5rem;
+    }
+
+    .section1part1 .btn-group {
+        top: -0.5rem;
+    }
+
+    
+    /********************************************************************* SECTION 3 ******************************************/
+
+    .section3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        padding-bottom: 3.3rem;
+    }
+    .card3,.card4,.card5,.card6,.card7,.card8 {
+        width: 45%;
+    }
+    
+    .btn-group {
+
+        position: absolute;
+        left: 20%;
+        bottom: 0rem;
+        
+    }
+
+     /************************************************** SECTION 5 ******************************************/
+
+     .section5-card {
+         width: 65%;
+         margin: 1rem auto;
+     }
+     .section5-card > .card-body > .btn-group {
+         left: 23%;
+     }
+     .card-btn {
+         font-size: 0.9rem;
+     }
+    /************************************************** SECTION 7 ******************************************/
+
+    footer {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .foot-icons {
+        width: 64px;
+    }
+
+}
+
+/************************************************************** media screen from 902px to 1199px *********************************************/
+
+@media (min-width:902px) {
+    body {
+        overflow-x: visible;
+    }
+    .h1 {
+        font-size: 2.3rem;
+        font-family: 'Cookie';
+    
+    }
+    .h2 {
+        font-size: 1.9rem;
+    
+        
+        
+    }
+    .h3 {
+        font-size: 1.7rem;
+    }
+    .para2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        font-size: 1.1rem;
+    }
+
+    /**************************************************** Section 1*******************************/
+    .section1-heading {
+        font-size: 2.6rem;
+    }
+    .para1 {
+        font-family: 'Dancing Script' , cursive;;
+        font-weight: 600;
+        animation:hi 300ms linear 1.5s forwards;
+        font-size: 1.3rem;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        opacity: 0;
+
+    }
+
+   
+
+    .section2 {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .card2 {
+        order: 0;
+        width: 50%;
+
+    }
+    .btn-group {
+        left: 23%;
+    }
+    .div-img {
+        order: 1;
+        width: 48%;
+
+    }
+    .section2-img {
+        box-shadow: none;
+    }
+        /************************** SECTION 3 ******************/
+
+        .card3,.card4,.card5,.card6,.card7,.card8 {
+            width: 45%;
+        }
+        .card-body > .card-text {
+            color: var(--card-text);
+            text-align: center;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+        .card-btn {
+            font-size: 1rem;
+        }
+        .card-heading {
+            font-size: 2rem;
+        }
+        .card-icons {
+            width: 23px;
+        }
+        .card-list-text {
+            font-size: 0.9rem;
+        }
+    
+    /************************** SECTION 4 ******************/
+    
+
+    .section4-img-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section4-img {
+        margin: 0;
+        width: 49%;
+    }
+        /************************** SECTION 5 ******************/
+    
+    .section5-card {
+        margin: 1rem 0.1rem;
+        width: 47%;
+    }
+
+    .section5-cards-part1 , .section5-cards-part2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .section5-card:first-of-type {
+        margin-top: 1rem;
+    }
+
+    
+       /******************************************************** SECTION 6 ***********************************/
+
+    .section6-img {
+        max-width: 1500px;
+        padding: 1rem;
+    }   
+    /**************************************************************** SECTION 7 *********************************/
+    .foot-para {
+        font-size: 1rem;
+    }
+
+    
+
+
+}
+
+/************************************************************** media screen from 1200px to .... *********************/
+
+@media (min-width:1200px) {
+    .nav-links {
+        font-size: 1.3rem;
+    }
+     /************************** SECTION 1 ******************/
+    .para1 {
+        font-size: 1.9rem;
+    }
+    .info-items:nth-of-type(4) {
+        display: block;
+    }
+    .para1 > a > .sec1-btn {
+        letter-spacing: 2px;
+
+    }
+     /************************** SECTION 3 ******************/
+
+     .section3 {
+         padding: 0 3rem;
+     }
+    .card3,.card4,.card5,.card6,.card7,.card8 {
+        width: 32%;
+        margin: 1rem auto;
+    }
+
+    .card > .card-body> .btn-group {
+        left: 22%;
+    }
+    .card-btn {
+        font-size: 1rem;
+        margin-right: 0.4rem;
+    }
+    /************************** SECTION 5 ******************/
+    .section5-card {
+        width: 32%;
+    }
+    .section5-cards-part1 , .section5-cards-part2 {
+        padding: 0 3rem;
+    }
+
+    .section5-card-heading {
+        font-size: 1.4rem;
+    }
+    .project-card-body > .card-text {
+        font-size: 0.9rem;
+    }
+}
