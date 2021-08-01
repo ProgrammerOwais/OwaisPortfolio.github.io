@@ -671,7 +671,7 @@ footer {
     margin: 0.2rem;
     font-size: 0.9rem;
     padding: 0.5rem;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 
