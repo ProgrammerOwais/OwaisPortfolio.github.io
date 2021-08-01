@@ -82,6 +82,8 @@ img {
     justify-content: space-around;
 }
 .header-col-1 {
+    width: 40%;
+    padding-top: 0.5rem;
     height: 70px;
     display: flex;
     align-items: center;
@@ -96,7 +98,7 @@ img {
 }
 
 .header-col-2 {
-    width: 60%;
+    width: 55%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -669,6 +671,7 @@ footer {
     margin: 0.2rem;
     font-size: 0.9rem;
     padding: 0.5rem;
+    overflow-x: hidden;
 }
 
 
