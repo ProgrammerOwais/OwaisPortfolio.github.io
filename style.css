@@ -197,11 +197,6 @@ img {
     border-bottom: 2px solid var(--para-color);
 }
 
- .themes:hover , .themes:focus , 
- .works:hover , .works:focus {
-     border-bottom: 0px;
- }
-
  .link-arrow {
      color: var(--para-color);
      font-weight: bolder;
@@ -738,9 +733,38 @@ footer {
         font-size: 1rem;
         padding-bottom: 5px;
     }
-    .nav-links:hover , .nav-links:focus {
+    .nav-links::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--card-color3);
+        transition: all 300ms;
+    }
+
+    .nav-item:hover .nav-links::after {
+        left: 5%;
+        right: 5%;
+        width: 90%;
+    }
+
+    .nav-links:active {
         border-bottom: 2px solid var(--card-color3);
     }
+    .nav-links:hover , .nav-links:focus {
+        border-bottom: none;
+    }
+
+    .themes:hover , .themes:focus , 
+     .works:hover , .works:focus {
+     border-bottom: 0px;
+     }
+     .themes::after , .works::after {
+        all: unset;
+     }
     
     
      .link-arrow {
@@ -761,6 +785,9 @@ footer {
         position: absolute;
         top: 2.7rem;
         background-color: var(--bottom-headings);
+        display: block;
+        opacity: 0;
+        transition: all 500ms;
     }
     .sub-items{
         padding: 5px;
@@ -771,7 +798,8 @@ footer {
     }
     
     .nav-item:hover .sub-list , .nav-item:focus .sub-list{
-        display: block;
+        opacity: 1;
+        
     }
     
      /**************************************************************** SECTION 1 ******************************************/
