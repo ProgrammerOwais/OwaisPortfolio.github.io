@@ -196,6 +196,11 @@ img {
     border-bottom: 2px solid var(--para-color);
 }
 
+.themes:focus ,.themes:hover ,
+.works:hover , .works:focus {
+    border-bottom: 0px;
+}
+
  .link-arrow {
      color: var(--para-color);
      font-weight: bolder;
