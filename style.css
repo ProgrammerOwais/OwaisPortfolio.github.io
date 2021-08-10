@@ -164,20 +164,19 @@ img {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 98%;
-    left: 1%;    
+    width: 0%;
+    right: 1%;    
     top: 4.5rem;
     background-color: var(--bottom-headings);
     padding: 3rem 0;
     border-radius: 1rem;
-    transform: translateX(100%);
     opacity: 0;
     transition: all 400ms;
     
 }
 
 .header-col-2.active .nav-list {
-    transform: translateX(0%);
+    width: 98%;
     opacity: 1;
 }
 .nav-item {
@@ -720,7 +719,6 @@ footer {
         background-color: transparent;
         justify-content: space-between;
         align-items: center;
-        transform: translateX(0%);
         opacity: 1;
     }
     .nav-item {
