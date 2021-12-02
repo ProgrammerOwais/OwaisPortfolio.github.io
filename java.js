@@ -175,6 +175,7 @@ function theme2(params) {
     document.querySelector('.img-change4').src = "images/cartoonimg6-2.jpg"
     
 }
+alert('everything is working good')
 
 
 
@@ -196,53 +197,3 @@ function theme2(params) {
 
 
 
-
-
-
-// window.addEventListener('scroll',function () {
-//     var box = document.querySelector('.section2-img');
-//      var box1 = box.getBoundingClientRect().top;
-//      if (box1 <= (window.innerHeight) *(0.50)) {
-//          box.style.opacity='1';
-//           box.style.top='0'
-//      }
-// })
-
-//  var heading = document.querySelector('.h1');
-//  console.log(heading.innerText.length);
-
-
-
-
- // TExt opacity section 
-
-
-// var h1          = document.querySelector('.h1');
-// var h1part2          = document.querySelector('.h1part2');
-// var nodeText1   = document.createTextNode;
-// var headingcontent = h1.innerText;
-// nodeText1 = headingcontent;
-// var span     =[];
-//  setTimeout(() => {
-//     for (let i=0; i<nodeText1.length; i++) {
-//         span[i] = document.createElement('span');
-//         span[i].innerHTML = nodeText1[i];
-//         span[i].style.opacity='0';
-//         h1part2.appendChild(span[i]);
-    
-//        }
-    
-//     var j= 0;
-    
-//     var t2 = setInterval(() => {
-    
-//         span[j].style.opacity="1";
-//         j=j+1;
-    
-//         if(j===span.length) {
-//             clearInterval(t2);
-//         }
-        
-//     }, 100);
-    
-// }, 4000);
