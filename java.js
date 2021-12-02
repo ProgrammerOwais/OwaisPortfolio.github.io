@@ -175,7 +175,7 @@ function theme2(params) {
     document.querySelector('.img-change4').src = "images/cartoonimg6-2.jpg"
     
 }
-alert('everything is working good')
+
 
 
 
