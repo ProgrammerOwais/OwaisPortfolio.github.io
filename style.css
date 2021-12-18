@@ -196,6 +196,7 @@ img {
 .works:hover,
 .works:focus {
   border-bottom: 0px;
+  cursor: pointer;
 }
 
 .link-arrow {
@@ -243,6 +244,7 @@ img {
   font-size: 0.9rem;
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 
 main {
@@ -349,14 +351,15 @@ main {
   top: 1.3rem;
 }
 
-.para1 > a > .sec1-btn {
+.para1 > .sec1-btn {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 1px;
   background-color: var(--bottom-headings);
   color: var(--body-bg);
 }
 
-.para1 > a > .sec1-btn:hover,
-.para1 > a > .sec1-btn:focus {
+.para1 > .sec1-btn:hover,
+.para1 > .sec1-btn:focus {
   background-color: var(--card-color1);
 }
 
@@ -471,6 +474,7 @@ main {
 }
 
 .btn-group {
+  height: 50px;
   margin: 1rem;
   margin-bottom: 0rem;
 }
@@ -487,6 +491,9 @@ main {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
   transition: all 300ms;
+  text-decoration: none;
+  /* position: relative;
+  top: -20px; */
 }
 .card-btn:hover,
 .card-btn:focus {
@@ -790,7 +797,7 @@ footer {
     position: relative;
   }
 
-  .para1 > a > .sec1-btn {
+  .para1 > .sec1-btn {
     font-size: 1.2rem;
   }
 
@@ -1011,7 +1018,7 @@ footer {
   .info-items:nth-of-type(4) {
     display: block;
   }
-  .para1 > a > .sec1-btn {
+  .para1 > .sec1-btn {
     letter-spacing: 2px;
   }
   /************************** SECTION 3 ******************/
