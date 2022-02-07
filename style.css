@@ -762,8 +762,7 @@ footer {
     position: absolute;
     top: 2.7rem;
     background-color: var(--bottom-headings);
-    display: block;
-    opacity: 0;
+    display: none;
     transition: all 500ms;
   }
   .sub-items {
@@ -773,9 +772,8 @@ footer {
     font-size: 1rem;
   }
 
-  .nav-item:hover .sub-list,
-  .nav-item:focus .sub-list {
-    opacity: 1;
+  .nav-item:hover .sub-list {
+    display: block;
   }
 
   /**************************************************************** SECTION 1 ******************************************/
